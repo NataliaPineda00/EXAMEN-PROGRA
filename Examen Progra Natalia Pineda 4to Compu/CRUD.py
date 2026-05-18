@@ -44,32 +44,3 @@ while True:
                   f"Tablas: {dato['tablas']} | "
                   f"Números: {dato['numeros']}")
 
-#ACTUALIZADOR DE DATOS
-    if len(tablas_guardadas) > 0:
-
-        opcion = int(input("Seleccione el registro a actualizar: ")) - 1
-
-        if 0 <= opcion < len(tablas_guardadas):
-            nuevos_tablas = int(input("Nuevo límite de tablas: "))
-            nuevos_numeros = int(input("Nuevo límite de números: "))
-
-            tablas_guardadas[opcion]["tablas"] = nuevos_tablas
-            tablas_guardadas[opcion]["numeros"] = nuevos_numeros
-
-            print("Registro actualizado correctamente.")
-
-        else:
-            print("Opción inválida.")
-
-#BORRAR DATOS
-    if len(tablas_guardadas) >0:
-        opcion = int(input("Seleccione el registro a eliminar: ")) - 1
-
-        if 0 <= opcion < len(tablas_guardadas):
-
-            tablas_guardadas.pop(opcion)
-
-            print("Registro eliminado correctamente.")
-
-        else:
-            print("Opción inválida.")
